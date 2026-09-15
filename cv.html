@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CV of Nathanya Xavier">
+  <title>CV | nathanya</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Popup shell (overlay, window, titlebar) is shared with the about page -->
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="cv.css">
+</head>
+<body>
+  <main class="page">
+    <article class="window window--cv">
+      <header class="titlebar">
+        <h1 class="titlebar__title">CV</h1>
+        <a class="titlebar__close" href="index.html" aria-label="close and go back home"></a>
+      </header>
+
+      <!-- Put the CV file at files/CV_Nathanya_Xavier.pdf (or change the three links below) -->
+      <div class="cv-toolbar">
+        <span class="cv-toolbar__name">CV_Nathanya_Xavier.pdf</span>
+        <div class="cv-toolbar__actions">
+          <a class="cv-button" href="files/Nathanya Xavier Napitupulu_CV.pdf" target="_blank" rel="noopener">open in new tab</a>
+          <a class="cv-button cv-button--primary" href="files/Nathanya Xavier Napitupulu_CV.pdf" download>download</a>
+        </div>
+      </div>
+
+      <div class="cv-viewer">
+        <iframe
+          class="cv-viewer__frame"
+          src="files/Nathanya Xavier Napitupulu_CV.pdf#view=FitH"
+          title="CV of Nathanya Xavier (PDF)"
+        ></iframe>
+      </div>
+    </article>
+  </main>
+
+  <!-- Theme, backdrop click and Escape-to-close behave the same as the about page -->
+  <script src="about.js"></script>
+</body>
+</html>

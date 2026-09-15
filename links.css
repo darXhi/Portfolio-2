@@ -1,0 +1,125 @@
+/* ==========================================================
+   Links page (builds on style.css)
+   ========================================================== */
+.window__actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.links {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 20px;
+}
+
+/* Max 3 per row; rows grow with the number of links and a shorter last row stays centered */
+.links__grid {
+  --links-col: 120px;
+  --links-gap: 56px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px var(--links-gap);
+  max-width: calc(var(--links-col) * 3 + var(--links-gap) * 2);
+}
+
+.links__grid > li {
+  width: var(--links-col);
+}
+
+.links__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  transition: transform var(--transition);
+}
+
+.links__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  font-size: 34px;
+  color: var(--color-white);
+  background: #111111;
+  border-radius: 50%;
+  transition: background-color var(--transition);
+}
+
+.links__label {
+  font-size: 16px;
+  color: var(--color-text);
+  transition: color var(--transition);
+}
+
+.links__item:hover,
+.links__item:focus-visible {
+  transform: scale(1.06);
+}
+
+.links__item:hover .links__icon,
+.links__item:focus-visible .links__icon {
+  background: var(--color-blue);
+}
+
+.links__item:hover .links__label,
+.links__item:focus-visible .links__label {
+  color: var(--color-blue);
+}
+
+.links__item:focus-visible {
+  outline: 2px dashed var(--color-blue);
+  outline-offset: 6px;
+  border-radius: 6px;
+}
+
+.links__note {
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: var(--color-text);
+  text-align: center;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+}
+
+/* Keep the black circles visible on the dark surface */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .links__icon {
+    background: #000000;
+    box-shadow: 0 0 0 1px var(--color-border);
+  }
+}
+
+:root[data-theme="dark"] .links__icon {
+  background: #000000;
+  box-shadow: 0 0 0 1px var(--color-border);
+}
+
+@media (max-width: 640px) {
+  .links__grid {
+    --links-col: calc((100% - 24px) / 3);
+    --links-gap: 12px;
+    row-gap: 28px;
+    width: 100%;
+    max-width: none;
+  }
+
+  .links__icon {
+    width: 64px;
+    height: 64px;
+    font-size: 28px;
+  }
+
+  .links__label {
+    font-size: 14px;
+  }
+}
