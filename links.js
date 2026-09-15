@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const HOME_URL = "index.html";
+  const HOME_URL = "/";
 
   /* ---------- Light / dark theme (shared key with index.html) ---------- */
   const THEME_KEY = "theme";
