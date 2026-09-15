@@ -15,12 +15,12 @@ A lightweight static site built with plain HTML, CSS and JavaScript (no framewor
 | Home | [`/`](https://nathaxvry.my.id/) | Typing greeting, main menu, contact section and socials |
 | About | [`/about`](https://nathaxvry.my.id/about) | Profile, education, languages, hard and soft skills |
 | Project | [`/project`](https://nathaxvry.my.id/project) | Tools, development stack and project showcase |
-| CV | [`/cv`](https://nathaxvry.my.id/cv) | CV viewer (PDF) with open and download buttons |
+| Resume | [`/resume`](https://nathaxvry.my.id/resume) | Resume viewer (PDF) with open and download buttons |
 | Links | [`/links`](https://nathaxvry.my.id/links) | Social media links in a 3-column grid |
 
 ## Features
 
-- **Window-style UI**: dark title bar with close (X) button; About, Project and CV open as popups over a dimmed backdrop with scrollable content
+- **Window-style UI**: dark title bar with close (X) button; About, Project and Resume open as popups over a dimmed backdrop with scrollable content
 - **Light / dark theme**: follows the system setting, can be toggled manually, and is remembered across pages
 - **Clean URLs**: `/about` instead of `/about.html` (old `.html` links redirect automatically)
 - **Responsive**: works on desktop, tablet and phone
@@ -41,13 +41,13 @@ A lightweight static site built with plain HTML, CSS and JavaScript (no framewor
 ├── index.html            # Home page (with contact section)
 ├── about.html            # About popup
 ├── project.html          # Project popup
-├── cv.html               # CV popup (PDF viewer)
+├── resume.html           # Resume popup (PDF viewer)
 ├── links.html            # Social media links
 │
 ├── style.css             # Home styles + shared variables and theme
 ├── about.css             # Popup shell (overlay, window, scrolling) + About styles
 ├── project.css           # Project page styles (builds on about.css)
-├── cv.css                # CV page styles (builds on about.css)
+├── resume.css            # Resume page styles (builds on about.css)
 ├── links.css             # Links page styles (builds on style.css)
 │
 ├── script.js             # Home: theme toggle, view routing, typing animation
@@ -55,7 +55,7 @@ A lightweight static site built with plain HTML, CSS and JavaScript (no framewor
 ├── links.js              # Links: theme toggle, Escape to close
 │
 ├── images/               # Profile photo, project screenshots, placeholders
-├── files/                # CV PDF
+├── files/                # Resume PDF
 │
 ├── sitemap.xml           # Page list for search engines
 ├── robots.txt            # Crawler rules + sitemap location
@@ -64,15 +64,17 @@ A lightweight static site built with plain HTML, CSS and JavaScript (no framewor
 
 ## Running locally
 
-Because the site uses clean URLs (`/about`), links only resolve correctly on a server that supports them, such as Vercel's dev server:
+No build step is needed. Open `index.html` directly in a browser, or use VS Code Live Server.
+
+Internal links point to the `.html` files (`about.html`), so navigation works locally. On Vercel, `cleanUrls` redirects them to the clean addresses (`/about`).
+
+To preview with exactly the same behavior as production:
 
 ```bash
 npx vercel dev
 ```
 
 Then open <http://localhost:3000>.
-
-> Opening `index.html` directly or using VS Code Live Server will load the home page, but menu links like `/about` will not work there.
 
 ## Deployment
 
@@ -83,15 +85,21 @@ The site deploys automatically on Vercel when changes are pushed to the `main` b
 ```json
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/cv", "destination": "/resume", "permanent": true },
+    { "source": "/cv.html", "destination": "/resume", "permanent": true }
+  ]
 }
 ```
+
+The redirects keep old `/cv` links working after the page was renamed to `/resume`.
 
 ## Updating content
 
 | What | Where |
 |---|---|
-| CV file | Replace the PDF in `files/` and update the path in `cv.html` |
+| Resume file | Replace the PDF in `files/` and update the path in `resume.html` |
 | Project screenshots | Add images to `images/` and change the `<img src>` in `project.html` |
 | Project descriptions | Replace the placeholder text in `project.html` and remove `filter: blur(3px)` from `.project__desc` in `project.css` |
 | Social media links | Edit the `href` values in `links.html` (and the footer in `index.html`) |

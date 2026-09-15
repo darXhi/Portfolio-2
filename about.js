@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const HOME_URL = "/";
+  const HOME_URL = "index.html";
 
   // Use the theme picked on the home page so the backdrop matches it
   try {

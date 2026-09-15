@@ -1,4 +1,8 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/cv", "destination": "/resume", "permanent": true },
+    { "source": "/cv.html", "destination": "/resume", "permanent": true }
+  ]
 }
