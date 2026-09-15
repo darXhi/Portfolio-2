@@ -53,6 +53,7 @@ A lightweight static site built with plain HTML, CSS and JavaScript (no framewor
 ├── script.js             # Home: theme toggle, view routing, typing animation
 ├── about.js              # Popups: theme, backdrop click and Escape to close
 ├── links.js              # Links: theme toggle, Escape to close
+├── project.js            # Project cards, detail popup and auto image slider
 │
 ├── images/               # Profile photo, project screenshots, placeholders
 ├── files/                # Resume PDF
@@ -100,8 +101,9 @@ The redirects keep old `/cv` links working after the page was renamed to `/resum
 | What | Where |
 |---|---|
 | Resume file | Replace the PDF in `files/` and update the path in `resume.html` |
-| Project screenshots | Add images to `images/` and change the `<img src>` in `project.html` |
-| Project descriptions | Replace the placeholder text in `project.html` and remove `filter: blur(3px)` from `.project__desc` in `project.css` |
+| Project images | Add images to `images/`, then in `project.html` set the card preview `<img>` (first image) and list every image inside that project's `.project__details` — they slide in the popup |
+| Project descriptions | Replace the text in the project's `.project__desc` and remove the `is-placeholder` class so it is no longer blurred |
+| Slide speed | Change `SLIDE_DURATION` (milliseconds) at the top of `project.js` |
 | Social media links | Edit the `href` values in `links.html` (and the footer in `index.html`) |
 | Adding a page | Create `page.html`, link to it as `/page`, and add a `<url>` entry to `sitemap.xml` |
 

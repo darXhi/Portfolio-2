@@ -96,74 +96,125 @@
         <section class="block block--divided">
           <h2 class="block__title">Application</h2>
 
-          <!-- Replace images/project-placeholder.svg with real screenshots of each project -->
+          <!--
+            Each project: the card shows the FIRST image as a clickable preview.
+            Everything inside .project__details (description + all images) is shown in the popup,
+            where the images slide automatically. Add or remove <img> tags there freely.
+            For a real description, drop the "is-placeholder" class so the text is not blurred.
+          -->
           <ul class="projects">
-            <li class="project">
-              <h3 class="project__title">AgriYield - Rice Yield Prediction System Using Machine Learning</h3>
-              <p class="project__desc" aria-label="description coming soon">
-                <span aria-hidden="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</span>
-              </p>
-              <div class="project__shots">
-                <img src="./images/Project 1.png" alt="AgriYield screenshot 1" loading="lazy">
-                <img src="images/project-placeholder.svg" alt="AgriYield screenshot 2" loading="lazy">
-                <img src="images/project-placeholder.svg" alt="AgriYield screenshot 3" loading="lazy">
+            <li class="project" id="agriyield">
+              <button class="project__card" type="button" aria-haspopup="dialog">
+                <span class="project__thumb">
+                  <img src="images/Project 1.png" alt="" loading="lazy">
+                  <span class="project__hint">view project</span>
+                </span>
+                <span class="project__title">AgriYield - Rice Yield Prediction System Using Machine Learning</span>
+              </button>
+              <div class="project__details" hidden>
+                <p class="project__desc">
+                  This project was developed to help estimate rice crop yield based on agriculture factors such as land area,
+                  fertilizer usage, rainfall, and other cultivation parameters. The goal was to provide a simple prediction tool
+                  that can support farmers and stakeholders in making better farming decisions. I was responsible for preparing
+                  the dataset, performing data preprocessing, training and evaluating several machine learning models, and
+                  integrating the selected model into a Streamlit web application. Besides the prediction model, I also designed
+                  the interface to ensure the application is easy to understand and comfortable to use. During development, I
+                  learned how data quality affects prediction accuracy, how to compare different machine learning algorithms,
+                  and how to present technical results through a user-friendly interface. This project strengthened my
+                  understanding of the complete machine learning workflow, from data preparation to development.
+                </p>
+                <img src="images/Project 1.png" alt="AgriYield screenshot 1" loading="lazy">
+                <img src="images/Project 1.2.jpeg" alt="AgriYield screenshot 2" loading="lazy">
+                <img src="images/Project 1.3.jpeg" alt="AgriYield screenshot 3" loading="lazy">
+                <img src="images/Project 1.4.jpeg" alt="AgriYield screenshot 4" loading="lazy">
+                <img src="images/Project 1.5.jpeg" alt="AgriYield screenshot 5" loading="lazy">
               </div>
             </li>
 
-            <li class="project">
-              <h3 class="project__title">Schola - Scholarship Management System</h3>
-              <p class="project__desc" aria-label="description coming soon">
-                <span aria-hidden="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</span>
-              </p>
-              <div class="project__shots">
+            <li class="project" id="schola">
+              <button class="project__card" type="button" aria-haspopup="dialog">
+                <span class="project__thumb">
+                  <img src="images/project-placeholder.svg" alt="" loading="lazy">
+                  <span class="project__hint">view project</span>
+                </span>
+                <span class="project__title">Schola - Scholarship Management System</span>
+              </button>
+              <div class="project__details" hidden>
+                <p class="project__desc is-placeholder" aria-label="description coming soon">
+                  <span aria-hidden="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</span>
+                </p>
                 <img src="images/project-placeholder.svg" alt="Schola screenshot 1" loading="lazy">
                 <img src="images/project-placeholder.svg" alt="Schola screenshot 2" loading="lazy">
                 <img src="images/project-placeholder.svg" alt="Schola screenshot 3" loading="lazy">
               </div>
             </li>
 
-            <li class="project">
-              <h3 class="project__title">Comparative Analysis of Pothole Detection and Dimensional Estimation Using Traditional Computer Vision and YOLOv8-Seg with MiDaS</h3>
-              <p class="project__desc" aria-label="description coming soon">
-                <span aria-hidden="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</span>
-              </p>
-              <div class="project__shots">
+            <li class="project" id="pothole-detection">
+              <button class="project__card" type="button" aria-haspopup="dialog">
+                <span class="project__thumb">
+                  <img src="images/project-placeholder.svg" alt="" loading="lazy">
+                  <span class="project__hint">view project</span>
+                </span>
+                <span class="project__title">Comparative Analysis of Pothole Detection and Dimensional Estimation Using Traditional Computer Vision and YOLOv8-Seg with MiDaS</span>
+              </button>
+              <div class="project__details" hidden>
+                <p class="project__desc is-placeholder" aria-label="description coming soon">
+                  <span aria-hidden="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</span>
+                </p>
                 <img src="images/project-placeholder.svg" alt="Pothole detection screenshot 1" loading="lazy">
                 <img src="images/project-placeholder.svg" alt="Pothole detection screenshot 2" loading="lazy">
                 <img src="images/project-placeholder.svg" alt="Pothole detection screenshot 3" loading="lazy">
               </div>
             </li>
 
-            <li class="project">
-              <h3 class="project__title">Floral and Co - E-Commerce Website for Plant Shopping</h3>
-              <p class="project__desc" aria-label="description coming soon">
-                <span aria-hidden="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</span>
-              </p>
-              <div class="project__shots">
+            <li class="project" id="floral-and-co">
+              <button class="project__card" type="button" aria-haspopup="dialog">
+                <span class="project__thumb">
+                  <img src="images/project-placeholder.svg" alt="" loading="lazy">
+                  <span class="project__hint">view project</span>
+                </span>
+                <span class="project__title">Floral and Co - E-Commerce Website for Plant Shopping</span>
+              </button>
+              <div class="project__details" hidden>
+                <p class="project__desc is-placeholder" aria-label="description coming soon">
+                  <span aria-hidden="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</span>
+                </p>
                 <img src="images/project-placeholder.svg" alt="Floral and Co screenshot 1" loading="lazy">
                 <img src="images/project-placeholder.svg" alt="Floral and Co screenshot 2" loading="lazy">
                 <img src="images/project-placeholder.svg" alt="Floral and Co screenshot 3" loading="lazy">
               </div>
             </li>
 
-            <li class="project">
-              <h3 class="project__title">ParkEasy - Smart Parking Mobile Application</h3>
-              <p class="project__desc" aria-label="description coming soon">
-                <span aria-hidden="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</span>
-              </p>
-              <div class="project__shots">
+            <li class="project" id="parkeasy">
+              <button class="project__card" type="button" aria-haspopup="dialog">
+                <span class="project__thumb">
+                  <img src="images/project-placeholder.svg" alt="" loading="lazy">
+                  <span class="project__hint">view project</span>
+                </span>
+                <span class="project__title">ParkEasy - Smart Parking Mobile Application</span>
+              </button>
+              <div class="project__details" hidden>
+                <p class="project__desc is-placeholder" aria-label="description coming soon">
+                  <span aria-hidden="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</span>
+                </p>
                 <img src="images/project-placeholder.svg" alt="ParkEasy screenshot 1" loading="lazy">
                 <img src="images/project-placeholder.svg" alt="ParkEasy screenshot 2" loading="lazy">
                 <img src="images/project-placeholder.svg" alt="ParkEasy screenshot 3" loading="lazy">
               </div>
             </li>
 
-            <li class="project">
-              <h3 class="project__title">My Website - nathanya website</h3>
-              <p class="project__desc" aria-label="description coming soon">
-                <span aria-hidden="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</span>
-              </p>
-              <div class="project__shots">
+            <li class="project" id="my-website">
+              <button class="project__card" type="button" aria-haspopup="dialog">
+                <span class="project__thumb">
+                  <img src="images/project-placeholder.svg" alt="" loading="lazy">
+                  <span class="project__hint">view project</span>
+                </span>
+                <span class="project__title">My Website - nathanya website</span>
+              </button>
+              <div class="project__details" hidden>
+                <p class="project__desc is-placeholder" aria-label="description coming soon">
+                  <span aria-hidden="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.</span>
+                </p>
                 <img src="images/project-placeholder.svg" alt="nathanya website screenshot 1" loading="lazy">
                 <img src="images/project-placeholder.svg" alt="nathanya website screenshot 2" loading="lazy">
                 <img src="images/project-placeholder.svg" alt="nathanya website screenshot 3" loading="lazy">
@@ -175,7 +226,35 @@
     </article>
   </main>
 
+  <!-- PROJECT DETAIL POPUP (filled by project.js) -->
+  <dialog class="project-modal" id="project-modal" aria-labelledby="project-modal-title">
+    <header class="titlebar">
+      <h2 class="titlebar__title">project detail</h2>
+      <button class="titlebar__close" type="button" data-modal-close aria-label="close project detail"></button>
+    </header>
+
+    <div class="project-modal__body">
+      <div class="slider" aria-roledescription="carousel">
+        <div class="slider__stage" data-slider-stage></div>
+        <button class="slider__arrow slider__arrow--prev" type="button" data-slider-prev aria-label="previous image">&#8249;</button>
+        <button class="slider__arrow slider__arrow--next" type="button" data-slider-next aria-label="next image">&#8250;</button>
+        <div class="slider__footer">
+          <div class="slider__dots" data-slider-dots></div>
+          <span class="slider__counter" data-slider-counter aria-live="polite"></span>
+        </div>
+        <span class="slider__progress" data-slider-progress></span>
+      </div>
+
+      <div class="project-modal__info">
+        <h3 class="project-modal__title" id="project-modal-title" data-modal-title></h3>
+        <div class="project-modal__desc" data-modal-desc></div>
+      </div>
+    </div>
+  </dialog>
+
   <!-- Theme, backdrop click and Escape-to-close behave the same as the about page -->
   <script src="about.js"></script>
+  <!-- Project cards, detail popup and image slider -->
+  <script src="project.js"></script>
 </body>
 </html>
