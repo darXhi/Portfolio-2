@@ -114,12 +114,24 @@
   }
 
   .links__icon {
-    width: 64px;
-    height: 64px;
-    font-size: 28px;
+    width: 54px;
+    height: 54px;
+    font-size: 23px;
   }
 
   .links__label {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .links__icon {
+    width: 46px;
+    height: 46px;
+    font-size: 19px;
+  }
+
+  .links__label {
+    font-size: 13px;
   }
 }

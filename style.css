@@ -548,7 +548,12 @@ ul {
   }
 
   .menu__icon {
-    font-size: 52px;
+    font-size: 40px;
+  }
+
+  .menu__label {
+    margin-top: 8px;
+    font-size: 15px;
   }
 
   .panel__title {
@@ -568,6 +573,20 @@ ul {
 
   .menu__item {
     width: calc((100% - 12px) / 2);
+  }
+
+  .menu__icon {
+    font-size: 34px;
+  }
+
+  .menu__label {
+    font-size: 14px;
+  }
+
+  .socials__link {
+    width: 36px;
+    height: 36px;
+    font-size: 17px;
   }
 }
 
