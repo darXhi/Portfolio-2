@@ -15,9 +15,10 @@
   --color-hover: #f3f6fd;
   --color-blue: #3b6fe0;
   --color-error: #c0392b;
-  --color-sky-soft: #9fc0fa;
-  --color-sky: #6d9bf5;
-  --color-sky-deep: #3b6fe0;
+  /* Gradient bawah: biru muda #C5F3FF -> atas: biru #2880C9 */
+  --color-sky-soft: #c5f3ff;
+  --color-sky: #76b9e4;
+  --color-sky-deep: #2880c9;
 
   --font-main: "Poppins", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 
@@ -34,18 +35,18 @@
     color-scheme: dark;
 
     --color-bg: #15161b;
-    --color-surface: #1f2027;
+    --color-surface: #1a304c;
     --color-ink: #f2f2f5;
     --color-text: #c4c6cf;
     --color-muted: #8b8e99;
     --color-header: #2c2d34;
     --color-border: #34363f;
-    --color-hover: #272b36;
+    --color-hover: #22405f;
     --color-blue: #6e9cff;
     --color-error: #ff7b6b;
-    --color-sky-soft: #1c2848;
-    --color-sky: #1f3a78;
-    --color-sky-deep: #2350b8;
+    --color-sky-soft: #1e415d;
+    --color-sky: #46749a;
+    --color-sky-deep: #6ea8d7;
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.3);
   }
 }
@@ -55,18 +56,18 @@
   color-scheme: dark;
 
   --color-bg: #15161b;
-  --color-surface: #1f2027;
+  --color-surface: #1a304c;
   --color-ink: #f2f2f5;
   --color-text: #c4c6cf;
   --color-muted: #8b8e99;
   --color-header: #2c2d34;
   --color-border: #34363f;
-  --color-hover: #272b36;
+  --color-hover: #22405f;
   --color-blue: #6e9cff;
   --color-error: #ff7b6b;
-  --color-sky-soft: #1c2848;
-  --color-sky: #1f3a78;
-  --color-sky-deep: #2350b8;
+  --color-sky-soft: #1e415d;
+  --color-sky: #46749a;
+  --color-sky-deep: #6ea8d7;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -88,16 +89,16 @@ body {
 body {
   font-family: var(--font-main);
   color: var(--color-text);
-  /* Plain top half, soft blue gradient bottom half */
+  /* Continuous gradient: deep blue up top, fading to soft blue at the bottom */
   background-color: var(--color-bg);
   background-image:
     linear-gradient(
       to bottom,
       var(--color-bg) 0%,
-      var(--color-bg) 48%,
-      var(--color-sky-soft) 58%,
-      var(--color-sky) 78%,
-      var(--color-sky-deep) 100%
+      var(--color-bg) 40%,
+      var(--color-sky-deep) 60%,
+      var(--color-sky) 80%,
+      var(--color-sky-soft) 100%
     );
   background-attachment: fixed;
   overflow-x: hidden;

@@ -12,6 +12,13 @@
   --color-photo-bg: #eeeeee;
   --color-white: #ffffff;
 
+  /* Popup surfaces: the window box and the smaller boxes inside it */
+  --surface: #ffffff;
+  --surface-soft: #eef2f8;
+  --surface-card: #ffffff;
+  --color-line: #cccccc;
+  --color-text-soft: #444444;
+
   --font-main: "Inter", "Helvetica Neue", Arial, sans-serif;
 
   --window-width: 600px;
@@ -20,28 +27,53 @@
 
   /* Page backdrop, matching style.css */
   --bg: #ffffff;
-  --sky-soft: #9fc0fa;
-  --sky: #6d9bf5;
-  --sky-deep: #3b6fe0;
+  /* Gradient bawah: biru muda #C5F3FF -> atas: biru #2880C9 */
+  --sky-soft: #c5f3ff;
+  --sky: #76b9e4;
+  --sky-deep: #2880c9;
   --overlay: rgba(17, 17, 17, 0.3);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #15161b;
-    --sky-soft: #1c2848;
-    --sky: #1f3a78;
-    --sky-deep: #2350b8;
+    --sky-soft: #1e415d;
+    --sky: #46749a;
+    --sky-deep: #6ea8d7;
     --overlay: rgba(0, 0, 0, 0.45);
+
+    --surface: #1a304c;
+    --surface-soft: #22405f;
+    --surface-card: #22405f;
+    --color-ink: #eef2f7;
+    --color-text-soft: #c3cdd9;
+    --color-border: #35506e;
+    --color-line: #3a5673;
+    --color-line-light: #2a4463;
+    --color-photo-bg: #22405f;
+    --color-blue: #7fb2ff;
+    --color-blue-dark: #a8ccff;
   }
 }
 
 :root[data-theme="dark"] {
   --bg: #15161b;
-  --sky-soft: #1c2848;
-  --sky: #1f3a78;
-  --sky-deep: #2350b8;
+  --sky-soft: #1e415d;
+  --sky: #46749a;
+  --sky-deep: #6ea8d7;
   --overlay: rgba(0, 0, 0, 0.45);
+
+  --surface: #1a304c;
+  --surface-soft: #22405f;
+  --surface-card: #22405f;
+  --color-ink: #eef2f7;
+  --color-text-soft: #c3cdd9;
+  --color-border: #35506e;
+  --color-line: #3a5673;
+  --color-line-light: #2a4463;
+  --color-photo-bg: #22405f;
+  --color-blue: #7fb2ff;
+  --color-blue-dark: #a8ccff;
 }
 
 /* ==========================================================
@@ -62,10 +94,10 @@ body {
   background-image: linear-gradient(
     to bottom,
     var(--bg) 0%,
-    var(--bg) 48%,
-    var(--sky-soft) 58%,
-    var(--sky) 78%,
-    var(--sky-deep) 100%
+    var(--bg) 40%,
+    var(--sky-deep) 60%,
+    var(--sky) 80%,
+    var(--sky-soft) 100%
   );
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
@@ -117,7 +149,7 @@ ul {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: var(--color-white);
+  background: var(--surface);
   border: 1px solid var(--color-border);
   border-radius: 6px;
   box-shadow:

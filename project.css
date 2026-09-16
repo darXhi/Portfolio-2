@@ -14,8 +14,8 @@
    ========================================================== */
 .notice {
   padding: 14px 18px;
-  background: #eaf3fd;
-  border: 1px solid #cfe2f8;
+  background: var(--surface-soft);
+  border: 1px solid var(--color-line);
   border-radius: 6px;
 }
 
@@ -55,8 +55,8 @@
   font-size: 13.5px;
   line-height: 1.5;
   color: var(--color-ink);
-  background: var(--color-white);
-  border: 1px solid #cccccc;
+  background: var(--surface-card);
+  border: 1px solid var(--color-line);
   border-radius: 6px;
 }
 
@@ -96,8 +96,8 @@
   display: block;
   aspect-ratio: 16 / 10;
   overflow: hidden;
-  background: #eef2f8;
-  border: 1px solid #dddddd;
+  background: var(--surface-soft);
+  border: 1px solid var(--color-line);
   border-radius: 6px;
   transition: border-color var(--transition), box-shadow var(--transition);
 }
@@ -173,7 +173,7 @@
   padding: 0;
   overflow: hidden;
   color: var(--color-ink);
-  background: var(--color-white);
+  background: var(--surface);
   border: 1px solid var(--color-border);
   border-radius: 6px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
@@ -230,7 +230,7 @@
   margin: 0;
   font-size: 15px;
   line-height: 1.75;
-  color: #444444;
+  color: var(--color-text-soft);
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
